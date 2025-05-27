@@ -1,0 +1,11 @@
+apiVersion: 1
+
+providers:
+  - name: 'default'                 # Имя набора дашбордов в Grafana
+    orgId: 1
+    folder: ''                      # Если вы хотите хранить дашборд в корне, оставьте пустым
+    type: file
+    disableDeletion: false          # Если true, при перезапуске Grafana JSON-дэшборды не будут удаляться
+    updateIntervalSeconds: 10       # Интервал (в секундах), с которым Grafana будет проверять изменения в папке
+    options:
+      path: /etc/grafana/provisioning/dashboards
